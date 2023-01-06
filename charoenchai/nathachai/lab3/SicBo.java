@@ -61,18 +61,23 @@ public class SicBo {
             dice[1] = dice2; // Set position 1 equal dice 2
             dice[2] = dice3; // Set position 2 equal dice 3
             Integer total_money = 0 ; // set total_money equal 0
-            for (int i = 0; i < 3; i++) { // Loop check if input user have in list add 30 to total_money
-                if(num_check == dice[i]){
-                    total_money +=30;
+            if(num_check>6 || num_check<0){
+                System.out.println("Incorrect input. Enter 1 - 6 only.");
+            }
+            else {
+                for (int i = 0; i < 3; i++) { // Loop check if input user have in list add 30 to total_money
+                    if(num_check == dice[i]){
+                        total_money +=30;
+                    }
                 }
-            }
-            if(total_money == 0){ // If user input not equal to all of the dice
-                System.out.println("Dice 1 : "+ dice1 +", Dice 2 : "+ dice2 +", Dice 3 : "+ dice3 ); // Output result 3 dice
-                System.out.println("You loose 10 Bath.");
-            }
-            else{
-                System.out.println("Dice 1 : "+ dice1 +", Dice 2 : "+ dice2 +", Dice 3 : "+ dice3 ); // Output result 3 dice
-                System.out.println("You win "+ total_money+" Bath.");
+                if(total_money == 0){ // If user input not equal to all of the dice
+                    System.out.println("Dice 1 : "+ dice1 +", Dice 2 : "+ dice2 +", Dice 3 : "+ dice3 ); // Output result 3 dice
+                    System.out.println("You loose 10 Bath.");
+                }
+                else{
+                    System.out.println("Dice 1 : "+ dice1 +", Dice 2 : "+ dice2 +", Dice 3 : "+ dice3 ); // Output result 3 dice
+                    System.out.println("You win "+ total_money+" Bath.");
+                }
             }
         }
         else { // If user input other that are not 1 and 2
