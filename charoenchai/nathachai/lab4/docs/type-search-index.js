@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"charoenchai.nathachai.lab4","l":"DisplayMatrix"},{"p":"charoenchai.nathachai.lab4","l":"SicBoV2"},{"p":"charoenchai.nathachai.lab4","l":"SicBoV3"},{"p":"charoenchai.nathachai.lab4","l":"SicBoV4"}]
