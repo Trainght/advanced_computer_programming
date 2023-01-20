@@ -15,7 +15,7 @@ public class WorldAthleteV2 {
         BadmintonPlayer ratchanok = new BadmintonPlayer("Rachanok Intanon", 55, 1.68, Athlete.Gender.FEMALE, 
             "Thai", "05/02/1995", 66.5, 4);
         Footballer tom = new Footballer("Tom Brady", 102, 1.93, Athlete.Gender.MALE, 
-            "American", "03/08/1977", "Quarterback", "New Englang Patriots");
+            "American", "03/08/1977", "Quarterback", "New England Patriots");
         Boxer wisaksil = new Boxer("Wilsaksil Wangek", 51.5, 1.60, Athlete.Gender.MALE, 
             "Thai", "08/12/1986", "Super Flyweight", "M");
         System.out.println(ratchanok);
