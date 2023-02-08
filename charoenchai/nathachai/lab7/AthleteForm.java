@@ -1,20 +1,27 @@
+/**
+ * This program is call MySimpleWindow will show like program MySimpleWindow and show infomation of AthleteForm.
+ * 
+ * Author: Nathachai Charoenchai
+ * ID: 653040126-5
+ * sec: 1
+ * Date: February 9, 2023
+ */
 package charoenchai.nathachai.lab7;
 
-import javax.swing.*;
+import javax.swing.*; // Import all Javax.swing
 
-import java.awt.*;
+import java.awt.*; // Import all Java.awt
 
-public class AthleteForm extends MySimpleWindow {
-    protected JLabel labelName, labelWeight, labelHeight, labelDate, labelGender;
-    protected JTextField textName, textWeight, textHeight, textDate;
+public class AthleteForm extends MySimpleWindow { // This class MySimpleWindown extends from MySimpleWindow
 
-    protected JPanel mainPanel, genderPannel, userIUpanel, TannLpanel, userButtomPanel, nortPanel, genderButtonPanel;
-    protected ButtonGroup selectionGender;
-    protected JRadioButton male, female;
+    protected JLabel labelName, labelWeight, labelHeight, labelDate, labelGender; // protected JLabel
+    protected JTextField textName, textWeight, textHeight, textDate; // protected JTextField
+    protected JPanel mainPanel, genderPannel, userIUpanel, TandLpanel, centerUIPanel, genderButtonPanel; // protected JPanel
+    protected ButtonGroup selectionGender; // protected ButtonGroup
+    protected JRadioButton male, female; // protected JRadioButton
 
     public AthleteForm(String title) {
-        super(title);
-
+        super(title); // sent string to JFrame
     }
 
     public static void main(String[] args) {
@@ -25,71 +32,70 @@ public class AthleteForm extends MySimpleWindow {
         });
     }
 
-    public static void createAndShowGUI() {
-        AthleteForm msw = new AthleteForm("Athlete Form");
+    public static void createAndShowGUI() { // Method createAndShowGUI is call addComponents and setFrameFeatures
+        AthleteForm msw = new AthleteForm("Athlete Form"); // JFrame title is "Athlete Form"
         msw.addComponents();
         msw.setFrameFeatures();
     }
 
-    @Override
+    @Override // Override method addComponents
     protected void addComponents() {
-        super.addComponents();
-        // Label
+        super.addComponents(); // call super addComponents
+        // Label have name, weight, height,date,gender
         labelName = new JLabel("Name :");
         labelWeight = new JLabel("Weight :");
         labelHeight = new JLabel("Height :");
         labelDate = new JLabel("Date of Birth (dd-mm-yyyy) :");
         labelGender = new JLabel("Gender :");
-        // TextField
+        // TextField name, weight, height,date and have 15 columns
         textDate = new JTextField(15);
         textHeight = new JTextField(15);
         textWeight = new JTextField(15);
         textName = new JTextField(15);
 
-        TannLpanel = new JPanel(new GridLayout(4, 2, 5, 4));
-        TannLpanel.add(labelName);
-        TannLpanel.add(textName);
+        TandLpanel = new JPanel(new GridLayout(4, 2, 5, 4)); // JPanel in GridLayout 4 rows 2 clos
+        TandLpanel.add(labelName); // add label name to TandLpanel
+        TandLpanel.add(textName); // add text name to TandLpanel
 
-        TannLpanel.add(labelWeight);
-        TannLpanel.add(textWeight);
+        TandLpanel.add(labelWeight); // add label weight to TandLpanel
+        TandLpanel.add(textWeight); // add text weight to TandLpanel
 
-        TannLpanel.add(labelHeight);
-        TannLpanel.add(textHeight);
+        TandLpanel.add(labelHeight); // add label height to TandLpanel
+        TandLpanel.add(textHeight); // add text height to TandLpanel
 
-        TannLpanel.add(labelDate);
-        TannLpanel.add(textDate);
+        TandLpanel.add(labelDate); // add label date to TandLpanel
+        TandLpanel.add(textDate); // add text date to TandLpanel
 
-        // RadioButtom and ButtonGroup
+        // RadioButtom and ButtonGroup of male and female
         male = new JRadioButton("Male");
         female = new JRadioButton("Female");
+
+        // add buttom male and female to ButtomGroup to select one
         selectionGender = new ButtonGroup();
         selectionGender.add(male);
         selectionGender.add(female);
-        genderButtonPanel = new JPanel();
+        genderButtonPanel = new JPanel(); // add buttom male and female to panel
         genderButtonPanel.add(male);
         genderButtonPanel.add(female);
 
-        genderPannel = new JPanel(new GridLayout(1, 2));
+        genderPannel = new JPanel(new GridLayout(1, 2)); // JPanel in GridLayout 1 rows 2 clos and add labelGender,genderButtomPanel to JPanel genderPannel
         genderPannel.add(labelGender);
         genderPannel.add(genderButtonPanel);
 
-        nortPanel = new JPanel(new BorderLayout());
-        nortPanel.add(TannLpanel, BorderLayout.NORTH);
-        nortPanel.add(genderPannel, BorderLayout.CENTER);
+        centerUIPanel = new JPanel(new BorderLayout()); // JPanel in BorderLayout
+        centerUIPanel.add(TandLpanel, BorderLayout.NORTH); // set TandLpanel to NORTH in centerUIPanel
+        centerUIPanel.add(genderPannel, BorderLayout.CENTER); // set genderPannel to CENTER in centerUIPanel
 
         // - userIUpanel
         userIUpanel = new JPanel(new BorderLayout());
-        userIUpanel.add(nortPanel, BorderLayout.NORTH);
+        userIUpanel.add(centerUIPanel, BorderLayout.CENTER); // set genderPannel to CENTER in centerUIPanel
 
-        userButtomPanel = new JPanel(new BorderLayout());
-        userButtomPanel.add(buttonPanel, BorderLayout.CENTER);
-        // - main panel
-        mainPanel = new JPanel(new BorderLayout());
-        mainPanel.add(userIUpanel, BorderLayout.NORTH);
-        mainPanel.add(userButtomPanel, BorderLayout.SOUTH);
+        // - main panel5
+        mainPanel = new JPanel(new BorderLayout(0, 4));
+        mainPanel.add(userIUpanel, BorderLayout.CENTER); // set userIUpanel to CENTER in mainPanel
+        mainPanel.add(buttonPanel, BorderLayout.SOUTH); // set userButtomPanel to SOUTH in mainPanel
 
         // add mainPanel to frame
         this.add(mainPanel);
-
     }
 }
