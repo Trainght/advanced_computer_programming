@@ -16,7 +16,7 @@ public class AthleteFormV2 extends AthleteForm { // This class AthleteFormV2 ext
     protected JLabel nationalityLabel, sportLabel, bioLabel; // protected JLabel
     protected JPanel sportPanel, nationPanel, bioPanel, southUIPanel; // protected JPanel
     protected JComboBox<String> nationComboBox; // protected JComboBox<String>
-    protected JList sportList; // protected JList
+    protected JList<String> sportList; // protected JList
     protected JScrollPane bioscroll; // protected JScrollPane
     protected String[] sportName = { "Badminton", "Boxing", "Football", "Running" }; // protected list String[]
 
@@ -59,7 +59,7 @@ public class AthleteFormV2 extends AthleteForm { // This class AthleteFormV2 ext
 
         /* sport label and list */
         sportLabel = new JLabel("Sport :"); // JLabel sport
-        sportList = new JList(sportName); // list sport
+        sportList = new JList<String>(sportName); // list sport
         sportList.setSelectedIndex(2); // set select position of sportList
         /* Sport Panel */
         sportPanel = new JPanel(new GridLayout(1, 2)); // JPanel in GridLayout 1 rows 2 clos
