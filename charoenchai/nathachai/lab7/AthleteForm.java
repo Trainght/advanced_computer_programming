@@ -87,7 +87,7 @@ public class AthleteForm extends MySimpleWindow { // This class MySimpleWindown 
         NorthUIPanel.add(genderPannel, BorderLayout.SOUTH); // set genderPannel to CENTER in centerUIPanel
 
         // - userIUpanel
-        userIUpanel = new JPanel(new BorderLayout(0,12));
+        userIUpanel = new JPanel(new BorderLayout(0,4));
         userIUpanel.add(NorthUIPanel, BorderLayout.NORTH); // set genderPannel to CENTER in centerUIPanel
 
         // - main panel5

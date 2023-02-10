@@ -31,9 +31,9 @@ public class AthleteFormV3 extends AthleteFormV2 { // This class AthleteFormV3 e
 
     public static void createAndShowGUI() { // Method createAndShowGUI is call addComponents setFrameFeatures and addMenus
         AthleteFormV3 msw = new AthleteFormV3("Athlete Form V3"); // JFrame title is "Athlete Form V3"
-        msw.addComponents();
+        msw.addComponents();   
+        msw.addMenus();    
         msw.setFrameFeatures();
-        msw.addMenus();
     }
 
     protected void addMenus() {
