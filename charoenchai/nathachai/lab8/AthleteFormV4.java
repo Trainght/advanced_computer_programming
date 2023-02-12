@@ -1,7 +1,6 @@
 package charoenchai.nathachai.lab8;
 
 import java.awt.*;
-import java.lang.reflect.Proxy;
 
 import javax.swing.*; // Import all Javax.swing
 import charoenchai.nathachai.lab7.*;
