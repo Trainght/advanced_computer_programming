@@ -74,7 +74,7 @@ public class AthleteFormV4 extends AthleteFormV3 {
 
         bioPanel.add(yearPanel, BorderLayout.SOUTH);
 
-        centerPanel = new JPanel(new BorderLayout());
+        centerPanel = new JPanel(new BorderLayout(0,0));
         centerPanel.add(hobbiesLabelAndBox, BorderLayout.CENTER);
 
         userIUpanel.add(centerPanel, BorderLayout.CENTER);
